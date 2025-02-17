@@ -1,0 +1,379 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.settings-container {
+  background-color: var(--bg-overlay);
+  width: 100%;
+  max-width: 800px;
+  border-radius: 2.5rem 2.5rem 0 0;
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+  height: 85vh;
+  height: 85dvh;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.25rem 1.25rem;
+  background-color: var(--bg-overlay);
+  gap: 1.5rem;
+}
+
+.close-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -0.5rem;
+  background: transparent;
+  border: none;
+}
+
+.close-button:active {
+  background-color: var(--hover-color);
+}
+
+.close-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--text-primary);
+  opacity: 0.8;
+}
+
+.settings-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.settings-content {
+  overflow-y: auto;
+  height: calc(85vh - 5rem);
+  padding: 0.5rem 1.25rem 1.5rem;
+}
+
+.settings-section {
+  background-color: var(--bg-secondary);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  margin: 0.875rem 0;
+}
+
+.settings-section h3 {
+  font-size: 0.8125rem;
+  color: var(--accent-color);
+  margin: 0;
+  padding: 1.25rem 1.25rem 0.75rem;
+  font-weight: 600;
+  font-family: 'SamsungOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  min-height: 3.25rem;
+  background-color: var(--bg-secondary);
+}
+
+.settings-item:active {
+  background-color: var(--hover-color);
+}
+
+.settings-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.settings-item-left svg {
+  width: 1.375rem;
+  height: 1.375rem;
+  color: var(--accent-color);
+  opacity: 0.9;
+}
+
+.settings-item-left span {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-family: 'SamsungOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.settings-value {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  font-family: 'SamsungOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Switch 토글 스타일 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.25rem;
+  height: 1.875rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: .15s;
+  border-radius: 1.875rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.1875rem;
+  bottom: 0.1875rem;
+  background-color: var(--bg-secondary);
+  transition: .15s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.375rem);
+}
+
+/* Range 슬라이더 스타일 */
+.slider-range {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 2px;
+  background: var(--border-color);
+  border-radius: 1px;
+  outline: none;
+  margin-right: 0.5rem;
+}
+
+.slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* 모델 선택 스타일 */
+.model-list {
+  padding: 0.75rem 1.25rem;
+}
+
+.model-item {
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-bottom: 0.75rem;
+}
+
+.model-item:last-child {
+  margin-bottom: 0;
+}
+
+.model-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.125rem 1.25rem;
+  background-color: var(--bg-tertiary);
+  border-radius: 1.125rem;
+  transition: background-color 0.15s ease;
+}
+
+.model-item-content:active {
+  background-color: var(--hover-color);
+}
+
+.model-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.model-name {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-family: 'SamsungOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.model-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-family: 'SamsungOne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 라디오 버튼 스타일 수정 */
+.radio-container {
+  position: relative;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-left: 1.5rem;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  border: 0.125rem solid var(--text-secondary);
+  border-radius: 50%;
+  transition: all 0.15s ease;
+}
+
+.radio-circle:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.15s ease;
+}
+
+input:checked + .radio-circle {
+  border-color: var(--accent-color);
+}
+
+input:checked + .radio-circle:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* 섹션 헤더 수정 */
+.settings-item.model-header {
+  padding: 1.125rem 1.25rem 0.75rem;
+  background-color: var(--bg-secondary);
+}
+
+.settings-item.model-header .settings-item-left {
+  opacity: 0.9;
+}
+
+.settings-item.model-header .settings-item-left span {
+  font-weight: 500;
+}
+
+/* 기존 select 스타일 제거 */
+.model-select {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    height: 85vh;
+  }
+  
+  .settings-content {
+    max-height: calc(85vh - 4.5rem);
+  }
+}
+
+/* 스크롤바 스타일 */
+.settings-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.settings-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 2px;
+}
+
+.edit-button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: var(--bg-tertiary);
+  border: none;
+  color: var(--accent-color);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.edit-button:active {
+  background-color: var(--hover-color);
+}
+
+.size-select {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.875rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+  outline: none;
+  min-width: 80px;
+}
+
+.settings-link {
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.settings-link:active {
+  opacity: 0.7;
+} 

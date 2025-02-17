@@ -1,0 +1,138 @@
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.search-container {
+  background-color: var(--bg-overlay);
+  width: 100%;
+  max-width: 800px;
+  border-radius: 2.5rem 2.5rem 0 0;
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+  height: 85vh;
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: var(--bg-overlay);
+}
+
+.search-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--bg-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 1.25rem;
+}
+
+.search-input-wrapper svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.search-input-wrapper input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.search-input-wrapper input::placeholder {
+  color: var(--text-secondary);
+}
+
+.search-content {
+  overflow-y: auto;
+  height: calc(85vh - 5rem);
+  padding: 0.5rem 1.25rem 1.5rem;
+}
+
+.search-item {
+  background-color: var(--bg-secondary);
+  border-radius: 1.25rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.search-item:active {
+  background-color: var(--hover-color);
+}
+
+.search-item-content {
+  padding: 1.25rem;
+}
+
+.search-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.search-item-sender {
+  font-size: 0.875rem;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.search-item-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.search-item-text {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.highlight {
+  background-color: rgba(3, 129, 254, 0.15);
+  color: var(--accent-color);
+  padding: 0.125rem 0;
+  border-radius: 0.25rem;
+}
+
+.empty-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* 스크롤바 스타일 */
+.search-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.search-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.search-content::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 2px;
+} 

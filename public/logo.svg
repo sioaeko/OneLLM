@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- OneUI 스타일의 원형 배경 -->
+    <circle cx="100" cy="100" r="90" fill="#1428A0"/>
+    
+    <!-- 그라데이션 효과 -->
+    <circle cx="100" cy="100" r="85" fill="url(#oneui_gradient)"/>
+    
+    <!-- 중앙 아이콘 -->
+    <path d="M65 80 L135 80 C145 80 150 85 150 95 L150 140 C150 150 145 155 135 155 L65 155 C55 155 50 150 50 140 L50 95 C50 85 55 80 65 80Z" fill="white"/>
+    <path d="M85 45 L115 45 L115 90 L85 90 Z" fill="white"/>
+    
+    <!-- 텍스트 -->
+    <text x="100" y="125" font-family="SamsungOne" font-size="24" font-weight="700" fill="#1428A0" text-anchor="middle">OneLLM</text>
+    
+    <!-- 그라데이션 정의 -->
+    <defs>
+        <linearGradient id="oneui_gradient" x1="0" y1="0" x2="200" y2="200">
+            <stop offset="0%" style="stop-color:#1428A0"/>
+            <stop offset="100%" style="stop-color:#14B4F0"/>
+        </linearGradient>
+    </defs>
+</svg>

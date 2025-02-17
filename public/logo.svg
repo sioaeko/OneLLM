@@ -6,8 +6,9 @@
             <stop offset="0%" stop-color="#1428A0"/>
             <stop offset="100%" stop-color="#14B4F0"/>
         </linearGradient>
+        <!-- OneUI 스타일 그림자 -->
         <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
             <feOffset dx="0" dy="2" result="offsetblur"/>
             <feComponentTransfer>
                 <feFuncA type="linear" slope="0.2"/>
@@ -19,19 +20,21 @@
         </filter>
     </defs>
 
-    <!-- 메인 원형 -->
-    <circle cx="100" cy="100" r="85" fill="white" filter="url(#shadow)"/>
+    <!-- OneUI 스타일 둥근 사각형 배경 -->
+    <rect x="30" y="30" width="140" height="140" rx="44" fill="white" filter="url(#shadow)"/>
     
-    <!-- AI 챗봇 아이콘 -->
-    <g transform="translate(50, 50)" filter="url(#shadow)">
-        <path d="M50 0C77.6142 0 100 22.3858 100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0Z" fill="url(#paint0_linear)"/>
+    <!-- 메인 아이콘 -->
+    <g transform="translate(45, 45)">
+        <rect x="0" y="0" width="110" height="110" rx="38" fill="url(#paint0_linear)"/>
         
-        <!-- 대화 버블 아이콘 -->
-        <path d="M35 30H65C68.866 30 72 33.134 72 37V53C72 56.866 68.866 60 65 60H55L50 65L45 60H35C31.134 60 28 56.866 28 53V37C28 33.134 31.134 30 35 30Z" fill="white"/>
-        
+        <!-- 대화 버블 아이콘 (흰색) -->
+        <path d="M35 35H75C80 35 85 40 85 45V65C85 70 80 75 75 75H62L55 82L48 75H35C30 75 25 70 25 65V45C25 40 30 35 35 35Z" 
+              fill="white" 
+              filter="url(#shadow)"/>
+              
         <!-- AI 도트 패턴 -->
-        <circle cx="43" cy="45" r="3" fill="#1428A0"/>
-        <circle cx="50" cy="45" r="3" fill="#1428A0"/>
-        <circle cx="57" cy="45" r="3" fill="#1428A0"/>
+        <circle cx="43" cy="55" r="4" fill="#1428A0"/>
+        <circle cx="55" cy="55" r="4" fill="#1428A0"/>
+        <circle cx="67" cy="55" r="4" fill="#1428A0"/>
     </g>
 </svg>

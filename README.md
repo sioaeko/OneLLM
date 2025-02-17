@@ -50,11 +50,21 @@ npm run dev
 
 이제 브라우저에서 `http://localhost:3000`으로 접속하여 OneLLM을 사용할 수 있습니다.
 
-## 스크린샷
+## 📸 스크린샷
 
 <div align="center">
-  <img src="screenshots/dark-mode.png" alt="다크 모드" width="45%"/>
-  <img src="screenshots/light-mode.png" alt="라이트 모드" width="45%"/>
+  <p><strong>🌙 다크 모드</strong></p>
+  <img src="screenshots/dark-mode.png" alt="다크 모드" width="800"/>
+  
+  <br/><br/>
+  
+  <p><strong>☀️ 라이트 모드</strong></p>
+  <img src="screenshots/light-mode.png" alt="라이트 모드" width="800"/>
+  
+  <br/><br/>
+  
+  <p><strong>💬 대화 인터페이스</strong></p>
+  <img src="screenshots/CleanShot 2025-02-17 at 23.38.32.gif" alt="대화 인터페이스" width="800"/>
 </div>
 
 ## 환경 설정
